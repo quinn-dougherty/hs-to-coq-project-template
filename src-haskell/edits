@@ -1,0 +1,11 @@
+rename value Key.Key = Key.MkKey
+rename value Mac.Mac = Mac.MkMac
+rename value HashedValue.HashedValue = HashedValue.MkHashedValue
+rename value IV.IV = IV.MkIV
+rename value Counter.Counter = Counter.MkCounter
+rename value SecureChannelState.SecureChannelState = SecureChannelState.MkSecureChannelState
+rename value Transmission.Transmission = Transmission.MkTransmission
+rename value Message.Message = Message.MkMessage
+rename value Datum.Datum = Datum.MkDatum
+
+axiomatize module Data.ByteString
