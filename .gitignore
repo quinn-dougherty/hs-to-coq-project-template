@@ -2,3 +2,8 @@ result
 src-haskell/dist
 dist
 .ghc-tmp
+dist-newstyle
+src-haskell/dist-newstyle
+src-haskell/.stack-work
+src-haskell/stack.yaml.lock
+src-haskell/result

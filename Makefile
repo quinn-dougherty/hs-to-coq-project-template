@@ -4,7 +4,15 @@
 # @file
 # @version 0.1
 
-call-hs-to-coq = ./result/bin/hs-to-coq -e result/hs-to-coq/base/edits --iface-dir result/hs-to-coq/base --iface-dir src-coq --import-dir src-haskell/src -e src-haskell/edits src-haskell/src/$(1).hs -o src-coq
+call-hs-to-coq = ./result/bin/hs-to-coq \
+					-e result/hs-to-coq/base/edits \
+					--iface-dir result/hs-to-coq/base \
+					--iface-dir src-coq \
+					--import-dir src-haskell/src \
+					-e src-haskell/edits \
+					src-haskell/src/$(1).hs \
+					-o src-coq
+
 call-coqc = coqc -R result/hs-to-coq/base \"\" -Q src-coq Src src-coq/$(1).v
 
 install:

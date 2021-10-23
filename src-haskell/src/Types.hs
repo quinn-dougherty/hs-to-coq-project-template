@@ -59,11 +59,11 @@ newtype Datum = Datum { unDatum :: String } deriving (Eq, Show)
 
 incrValid :: Integer ->  Counter -> Maybe Counter
 incrValid maxCount counter
-  | (toInteger $ unCounter counter) < maxCount = Just $ Counter (1 + unCounter counter)
+  | toInteger (unCounter counter) < maxCount = Just $ Counter (1 + unCounter counter)
   | otherwise = Nothing
 copyValid :: Integer -> Counter -> Counter -> Maybe Counter
 copyValid maxCount counter _
-  | (toInteger $ unCounter counter) < maxCount = Just counter
+  | toInteger (unCounter counter) < maxCount = Just counter
   | otherwise = Nothing
 
 

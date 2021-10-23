@@ -6,7 +6,7 @@ import Data.Word
 import qualified Data.ByteString as B
 
 testchankey' :: [Word8]
-testchankey' = (map toEnum ([1,1,1,1,1] ++ (take 27 $ repeat 0))) :: [Word8]
+testchankey' = map toEnum ([1,1,1,1,1] ++ replicate 27 0) :: [Word8]
 testchankey :: Key -- don't use this key irl
 testchankey = Key $ B.pack testchankey'
 

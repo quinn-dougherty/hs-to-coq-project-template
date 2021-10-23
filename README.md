@@ -12,7 +12,8 @@ I approached this based on [`nix`](https://nixos.org/download.html). `hs-to-coq`
 - Read `src-haskell/edits`
 - `theories/` is where your specs, models, and proofs go after you codegen to coq. 
 - `src-haskell/` is where your haskell source goes.
-- `src-coq/` is the output dir. 
+- `src-coq/` is the output dir.
+- Read `_CoqProject`
 - Read `gitfetch.nix`, `default.nix`, and `shell.nix`
 
 ## Usage
