@@ -1,6 +1,8 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ chan ? import ./chan.nix
+, pkgs ? import ./pkgs.nix { inherit chan; }
+}:
 let
-  fetchgit = import ./fetchgit.nix {};
+  fetchgit = import ./fetchgit.nix { inherit chan pkgs; };
 in pkgs.runCommand "hs-to-coq-result" {}
     ''
       mkdir -p $out

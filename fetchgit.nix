@@ -1,4 +1,6 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ chan ? import ./chan.nix
+, pkgs ? import ./pkgs.nix { inherit chan; }
+}:
 let
   hsToCoq_git = builtins.fetchGit {
     url = "https://github.com/plclub/hs-to-coq.git";
