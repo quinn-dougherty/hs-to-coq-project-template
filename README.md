@@ -1,3 +1,5 @@
+# This repo lives at [ArdanaLabs](https://github.com/ArdanaLabs/) now.
+
 # `hs-to-coq` project template (WIP)
 
 [`hs-to-coq` is a tool](https://github.com/plclub/hs-to-coq/) that generates coq from haskell source. 
